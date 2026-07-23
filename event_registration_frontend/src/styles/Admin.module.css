@@ -1,0 +1,112 @@
+.page { min-height: calc(100vh - 64px); background: #0a0a0f; color: #f1f5f9; }
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.header { margin-bottom: 2rem; }
+.heading { font-size: 1.75rem; font-weight: 800; color: #f1f5f9; display: flex; align-items: center; gap: 0.75rem; margin: 0.25rem 0; }
+.sub { color: #64748b; font-size: 14px; }
+.backLink { font-size: 13px; color: #64748b; text-decoration: none; display: inline-block; margin-bottom: 4px; }
+.backLink:hover { color: #94a3b8; text-decoration: none; }
+.pageHeader { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.totalBadge { background: rgba(79,70,229,0.15); color: #818cf8; font-size: 13px; font-weight: 600; padding: 2px 10px; border-radius: 99px; vertical-align: middle; border: 1px solid rgba(79,70,229,0.25); }
+.searchInput { padding: 9px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: #13131f; color: #f1f5f9; font-size: 14px; outline: none; min-width: 260px; transition: border-color 0.2s; }
+.searchInput:focus { border-color: #4f46e5; }
+.searchInput::placeholder { color: #475569; }
+
+.statsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.statCard { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 6px; transition: border-color 0.15s; }
+.statCard:hover { border-color: rgba(79,70,229,0.3); }
+.statIcon { font-size: 1.5rem; }
+.statValue { font-size: 2rem; font-weight: 800; color: #f1f5f9; }
+.statLabel { font-size: 13px; color: #64748b; }
+.statSkeleton { height: 110px; background: linear-gradient(90deg, #13131f 25%, #1a1a2e 50%, #13131f 75%); background-size: 400% 100%; animation: shimmer 1.4s infinite; border-radius: 12px; }
+@keyframes shimmer { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
+
+.navCards { display: flex; flex-direction: column; gap: 0.75rem; }
+.navCard { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem 1.5rem; text-decoration: none; color: #f1f5f9; display: flex; align-items: center; gap: 1rem; transition: border-color 0.15s, background 0.15s; }
+.navCard:hover { background: #1a1a2e; border-color: rgba(79,70,229,0.4); text-decoration: none; }
+.navCard h3 { font-size: 1rem; font-weight: 600; color: #f1f5f9; margin: 0 0 2px; }
+.navCard p { font-size: 13px; color: #64748b; margin: 0; }
+.navIcon { font-size: 1.5rem; flex-shrink: 0; }
+.navArrow { margin-left: auto; color: #475569; font-size: 1.2rem; }
+.errorBox { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25); border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem; color: #f87171; font-size: 14px; }
+
+.tableWrap { overflow-x: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th { background: #0d0d14; color: #475569; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.table td { padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: #cbd5e1; vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.02); }
+.inactiveRow td { opacity: 0.4; }
+.idCell { color: #475569; font-size: 12px; }
+.dateCell { color: #475569; font-size: 12px; white-space: nowrap; }
+.emailCell { color: #64748b; font-size: 11px; }
+.titleCell { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.userName { font-weight: 600; }
+.tableSkeleton { display: flex; flex-direction: column; gap: 6px; }
+.rowSkeleton { height: 44px; border-radius: 6px; background: linear-gradient(90deg, #13131f 25%, #1a1a2e 50%, #13131f 75%); background-size: 400% 100%; animation: shimmer 1.4s infinite; }
+
+.badgeOn { background: rgba(16,163,74,0.15); color: #4ade80; border: 1px solid rgba(16,163,74,0.25); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+.badgeOn:hover:not(:disabled) { background: rgba(16,163,74,0.25); }
+.badgeOff { background: rgba(255,255,255,0.05); color: #64748b; border: 1px solid rgba(255,255,255,0.08); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+.badgeOff:hover:not(:disabled) { background: rgba(255,255,255,0.08); color: #94a3b8; }
+.badgeAdmin { background: rgba(79,70,229,0.15); color: #818cf8; border: 1px solid rgba(79,70,229,0.25); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+.badgeAdmin:hover:not(:disabled) { background: rgba(79,70,229,0.25); }
+.badgeDisabled { background: rgba(220,38,38,0.1); color: #f87171; border: 1px solid rgba(220,38,38,0.2); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+.badgeDisabled:hover:not(:disabled) { background: rgba(220,38,38,0.2); }
+.btnDelete { background: rgba(220,38,38,0.1); color: #f87171; border: 1px solid rgba(220,38,38,0.2); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+.btnDelete:hover:not(:disabled) { background: rgba(220,38,38,0.2); }
+.btnDelete:disabled { opacity: 0.4; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.pageBtn { background: #13131f; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: background 0.15s; }
+.pageBtn:hover:not(:disabled) { background: #1a1a2e; color: #f1f5f9; }
+.pageBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pageInfo { font-size: 13px; color: #475569; }
+
+@media (max-width: 600px) { .pageHeader { flex-direction: column; align-items: flex-start; } .searchInput { width: 100%; min-width: unset; } }
+
+/* Pending Events Styles */
+.pendingGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.25rem; }
+.pendingCard { background: #13131f; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.pendingHeader { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
+.pendingTitle { font-size: 1.1rem; font-weight: 700; color: #f1f5f9; margin: 0; }
+.pendingDetails { display: flex; flex-direction: column; gap: 0.5rem; font-size: 13px; }
+.pendingDetails p { margin: 0; color: #94a3b8; }
+.pendingDetails strong { color: #cbd5e1; font-weight: 600; }
+.pendingDescription { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 0.75rem; font-size: 13px; color: #94a3b8; }
+.pendingDescription p { margin: 0; }
+.pendingDescription p:first-child { margin-bottom: 0.5rem; }
+.pendingActions { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
+
+/* Approval Status Badges */
+.badgePending { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25); padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badgeApproved { background: rgba(16,163,74,0.15); color: #4ade80; border: 1px solid rgba(16,163,74,0.25); padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badgeRejected { background: rgba(220,38,38,0.1); color: #f87171; border: 1px solid rgba(220,38,38,0.2); padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+
+/* Action Buttons for Approval */
+.btnApprove { background: rgba(16,163,74,0.15); color: #4ade80; border: 1px solid rgba(16,163,74,0.25); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s; flex: 1; }
+.btnApprove:hover:not(:disabled) { background: rgba(16,163,74,0.25); }
+.btnApprove:disabled { opacity: 0.4; cursor: not-allowed; }
+.btnReject { background: rgba(220,38,38,0.1); color: #f87171; border: 1px solid rgba(220,38,38,0.2); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s; flex: 1; }
+.btnReject:hover:not(:disabled) { background: rgba(220,38,38,0.2); }
+.btnReject:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Modal Styles */
+.modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 1rem; }
+.modalContent { background: #13131f; border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 2rem; max-width: 500px; width: 100%; }
+.modalTitle { font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0 0 1rem; }
+.modalText { font-size: 14px; color: #94a3b8; margin-bottom: 1rem; }
+.modalTextarea { width: 100%; padding: 0.75rem; background: #0a0a0f; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #f1f5f9; font-size: 14px; font-family: inherit; resize: vertical; margin-bottom: 1rem; }
+.modalTextarea:focus { outline: none; border-color: #4f46e5; }
+.modalActions { display: flex; gap: 0.75rem; justify-content: flex-end; }
+.btnCancel { background: rgba(255,255,255,0.05); color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 8px 20px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+.btnCancel:hover:not(:disabled) { background: rgba(255,255,255,0.08); }
+.btnCancel:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.empty { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 14px; }
+.status { text-align: center; padding: 2rem 1rem; color: #64748b; font-size: 14px; }
+
+@media (max-width: 600px) { 
+  .pendingGrid { grid-template-columns: 1fr; }
+  .modalContent { padding: 1.5rem; }
+}

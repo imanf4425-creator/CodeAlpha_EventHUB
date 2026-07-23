@@ -1,0 +1,72 @@
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,10,15,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.container {
+  max-width: 1300px; margin: 0 auto; padding: 0 1.5rem;
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  font-size: 1.2rem; font-weight: 800;
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; text-decoration: none; flex-shrink: 0;
+}
+.navLinks { display: flex; align-items: center; gap: 0.25rem; flex-wrap: nowrap; }
+.link {
+  color: #94a3b8; font-size: 13px; font-weight: 500;
+  padding: 6px 10px; border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none; white-space: nowrap;
+}
+.link:hover { background: rgba(255,255,255,0.06); color: #e2e8f0; text-decoration: none; }
+.active { background: rgba(79,70,229,0.15) !important; color: #818cf8 !important; }
+.divider { width: 1px; height: 20px; background: rgba(255,255,255,0.08); margin: 0 4px; flex-shrink: 0; }
+.btnOutline {
+  color: #818cf8; border: 1.5px solid rgba(79,70,229,0.4); background: transparent;
+  font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 6px;
+  transition: background 0.15s; text-decoration: none; white-space: nowrap;
+}
+.btnOutline:hover { background: rgba(79,70,229,0.1); text-decoration: none; }
+.btnPrimary {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff;
+  font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 6px;
+  transition: opacity 0.15s; text-decoration: none; white-space: nowrap; border: none;
+}
+.btnPrimary:hover { opacity: 0.9; text-decoration: none; }
+.btnLogout {
+  background: transparent; color: #ef4444; border: 1.5px solid rgba(220,38,38,0.4);
+  font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 6px;
+  cursor: pointer; transition: background 0.15s; white-space: nowrap;
+}
+.btnLogout:hover { background: rgba(220,38,38,0.1); }
+.adminBadge {
+  font-size: 12px; font-weight: 600; color: #fbbf24;
+  background: rgba(245,158,11,0.1); padding: 4px 12px;
+  border-radius: 99px; border: 1px solid rgba(245,158,11,0.25); white-space: nowrap;
+}
+.hamburger {
+  display: none; background: none; border: none;
+  font-size: 1.4rem; cursor: pointer; color: #94a3b8; padding: 4px 8px;
+}
+.mobileMenu {
+  display: none; flex-direction: column;
+  background: #13131f; border-top: 1px solid rgba(255,255,255,0.08); padding: 0.5rem 0;
+}
+.mobileLink {
+  padding: 12px 1.5rem; font-size: 15px; font-weight: 500;
+  color: #94a3b8; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.mobileLink:hover { background: rgba(255,255,255,0.04); color: #e2e8f0; text-decoration: none; }
+.mobileLogout {
+  margin: 0.5rem 1.5rem; background: rgba(220,38,38,0.1); color: #ef4444;
+  border: 1px solid rgba(220,38,38,0.3); padding: 10px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+@media (max-width: 900px) {
+  .navLinks { display: none; }
+  .hamburger { display: block; }
+  .mobileMenu { display: flex; }
+}

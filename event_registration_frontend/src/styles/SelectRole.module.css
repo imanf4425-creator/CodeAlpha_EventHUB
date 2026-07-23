@@ -1,0 +1,190 @@
+.page {
+  min-height: 100vh;
+  background: #0a0a0f;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top brand bar */
+.topBar {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0;
+}
+
+/* Center layout */
+.center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+/* Main card */
+.card {
+  background: #13131f;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 860px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0;
+  text-align: center;
+}
+.sub {
+  font-size: 15px;
+  color: #64748b;
+  margin: -1rem 0 0;
+  text-align: center;
+}
+
+/* Role cards row */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.roleCard {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.roleCard:hover {
+  border-color: rgba(79,70,229,0.4);
+  transform: translateY(-2px);
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  flex-shrink: 0;
+}
+
+.roleName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.roleDesc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+/* Admin single button */
+.btnPrimary {
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+.btnPrimary:hover { opacity: 0.9; }
+
+.roleNote {
+  font-size: 11px;
+  color: #475569;
+  text-align: center;
+  width: 100%;
+}
+
+/* Login + Register row */
+.btnRow {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btnLogin {
+  flex: 1;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btnLogin:hover { opacity: 0.9; }
+
+.btnRegister {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  color: #cbd5e1;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnRegister:hover { background: rgba(255,255,255,0.1); }
+
+/* Back link */
+.backBtn {
+  background: none;
+  border: none;
+  color: #475569;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -0.5rem;
+  transition: color 0.15s;
+}
+.backBtn:hover { color: #94a3b8; }
+
+@media (max-width: 700px) {
+  .roles { grid-template-columns: 1fr; }
+  .card { padding: 2rem 1.25rem; }
+  .title { font-size: 1.6rem; }
+}

@@ -1,0 +1,29 @@
+.page { min-height: calc(100vh - 64px); background: #0a0a0f; color: #f1f5f9; }
+.hero { background: radial-gradient(ellipse at 50% 0%, rgba(79,70,229,0.2) 0%, transparent 60%), #0d0d14; padding: 3rem 1.5rem 2rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.heading { font-size: 2.2rem; font-weight: 800; color: #f1f5f9; margin-bottom: 0.4rem; }
+.sub { font-size: 1rem; color: #94a3b8; margin: 4px 0; }
+.progressWrap { max-width: 400px; margin: 1rem auto 0; }
+.progressBar { height: 4px; background: linear-gradient(90deg, #4f46e5, #7c3aed); border-radius: 99px; transition: width 0.3s ease; }
+.progressText { font-size: 12px; color: #64748b; margin-top: 6px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 1.5rem; }
+.filterRow { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 1rem; background: #13131f; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); }
+.select { background: #0a0a0f; color: #f1f5f9; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 12px; font-size: 13px; outline: none; min-width: 160px; }
+.select:focus { border-color: #4f46e5; }
+.select option { background: #13131f; }
+.countBadge { margin-left: auto; background: rgba(79,70,229,0.15); color: #818cf8; padding: 4px 12px; border-radius: 99px; font-size: 12px; font-weight: 600; border: 1px solid rgba(79,70,229,0.25); }
+.dayGroup { margin-bottom: 2rem; }
+.dayLabel { font-size: 13px; font-weight: 700; color: #94a3b8; padding: 0.5rem 0; margin-bottom: 0.5rem; border-bottom: 2px solid rgba(79,70,229,0.2); text-transform: uppercase; letter-spacing: 0.5px; }
+.dayMatches { display: flex; flex-direction: column; gap: 0.5rem; }
+.matchRow { background: #13131f; border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; display: grid; grid-template-columns: 160px 1fr auto; align-items: center; gap: 1rem; transition: border-color 0.15s; }
+.matchRow:hover { border-color: rgba(79,70,229,0.3); }
+.matchSport { display: flex; flex-direction: column; gap: 3px; font-size: 12px; }
+.matchSport span:first-child { font-size: 1.1rem; }
+.matchLeague { color: #475569; font-size: 11px; }
+.matchTeams { display: flex; align-items: center; justify-content: center; gap: 1rem; flex: 1; }
+.team1 { font-size: 14px; font-weight: 600; color: #f1f5f9; text-align: right; flex: 1; }
+.team2 { font-size: 14px; font-weight: 600; color: #f1f5f9; text-align: left; flex: 1; }
+.matchVs { font-size: 14px; font-weight: 700; color: #475569; background: #0a0a0f; padding: 4px 12px; border-radius: 6px; min-width: 60px; text-align: center; flex-shrink: 0; }
+.matchVenue { font-size: 11px; color: #475569; text-align: right; }
+.empty { text-align: center; color: #64748b; padding: 4rem 1rem; }
+.loadingMore { text-align: center; color: #475569; font-size: 13px; padding: 1rem 0; }
+@media (max-width: 600px) { .matchRow { grid-template-columns: 1fr; gap: 0.5rem; } .matchTeams { justify-content: flex-start; } .team1, .team2 { text-align: left; } .matchVenue { text-align: left; } .countBadge { margin-left: 0; } }
