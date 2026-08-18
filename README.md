@@ -543,7 +543,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Iman Fatima**
 - GitHub: [@imanf4425-creator](https://github.com/imanf4425-creator)
-- Email: iman.fatima@eventhub.com
+- Email: imanf4425@gmail.com
 
 ---
 
